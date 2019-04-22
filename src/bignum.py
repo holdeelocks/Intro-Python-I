@@ -2,3 +2,11 @@
 # (try doing the same thing in the JS console and see what it outputs)
 
 # YOUR CODE HERE
+from math import pow
+
+
+def bignum():
+    return pow(2, 65536)
+
+
+bignum()

@@ -22,3 +22,29 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+calendar.setfirstweekday(calendar.SUNDAY)
+
+today = datetime.today()
+standin_day = "1"
+
+
+def date_objectify(str):
+    return datetime.strptime(str, "%d %B, %Y")
+
+
+if len(sys.argv) == 3:
+    date_string = standin_day + " " + \
+        sys.argv[1].capitalize() + ", " + sys.argv[2]
+    date_object = date_objectify(date_string)
+elif len(sys.argv) == 2:
+    date_string = standin_day + " " + \
+        sys.argv[1].capitalize() + ", " + str(today.year)
+    date_object = date_objectify(date_string)
+elif len(sys.argv) == 1:
+    date_object = today
+else:
+    print("Please provide the month and year as arguments")
+# calendar.prmonth(currentYear, currentMonth)
+
+calendar.prmonth(date_object.year, date_object.month)
