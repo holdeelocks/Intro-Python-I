@@ -14,14 +14,14 @@ z = "I like turtles!"
 
 
 def first_print():
-    print("x is %d, y is %.2f, z is %s" % (x, y, z))
+    print('x is %d, y is %.2f, z is "%s"' % (x, y, z))
 
 
 first_print()
 
 
 def printfunction():
-    print("x is {0}, y is {1}, z is {2}".format(x, y, z))
+    print('x is {}, y is {:.2f}, z is "{}"'.format(x, y, z))
 
 
 printfunction()
@@ -32,7 +32,7 @@ printfunction()
 
 
 def print_fstring():
-    print(f"x is {x}, y is {y}, z is {z}")
+    print(f'x is {x}, y is {y:.2f}, z is "{z}"')
 
 
 print_fstring()
